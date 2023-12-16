@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TodoAppAndroied</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ListScreenTitle">To Do List</string>
+    <string name="SettingsScreenTitle">Settings</string>
+    <string name="successfully">Task Inserted Successfully</string>
+    <string name="ok">Ok</string>
+</resources>
