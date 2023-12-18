@@ -15,14 +15,14 @@ abstract class MyDatabase : RoomDatabase() {
     abstract fun tasksDao(): TasksDao
 
     companion object{
-        val DATABASE_NAME = "TaskDatabase "
+        private val dataBaseName = "TasksDataBase"
         private var myDatabase : MyDatabase? = null
         fun getDatabase(context : Context) : MyDatabase{
             if (myDatabase == null){
                 myDatabase = Room.databaseBuilder(
                     context,
                     MyDatabase::class.java,
-                    DATABASE_NAME
+                    dataBaseName
                 ).allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
                     .build()
@@ -30,5 +30,4 @@ abstract class MyDatabase : RoomDatabase() {
             return myDatabase!!
         }
     }
-
 }

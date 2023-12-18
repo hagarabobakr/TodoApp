@@ -6,4 +6,6 @@
     <string name="SettingsScreenTitle">Settings</string>
     <string name="successfully">Task Inserted Successfully</string>
     <string name="ok">Ok</string>
+    <string name="edit">Are you sure you want to modify the task</string>
+    <string name="delet">Are you sure you want to delet the task</string>
 </resources>

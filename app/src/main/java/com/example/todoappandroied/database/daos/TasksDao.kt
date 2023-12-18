@@ -6,14 +6,17 @@ import com.example.todoappandroied.database.models.Task
 @Dao
 interface TasksDao {
     @Insert
-    fun insertTask(task: Task)
+    fun insertTask(task:Task)
+
     @Delete
-    fun deletTask(task: Task)
+    fun deleteTask(task:Task)
+
     @Update
-    fun updateTask(task: Task)
+    fun updateTask(task:Task)
+
     @Query("select * from tasks")
     fun getAllTask(): List<Task>
+
     @Query("select * from tasks where date =:selectedDate")
     fun getTasksByDate(selectedDate:Long): List<Task>
-
 }

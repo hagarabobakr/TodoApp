@@ -51,6 +51,9 @@
     <style name="themColor">
         <item name="android:textColor">@color/black</item>
     </style>
+    <style name="themArrwoBackgroundColor">
+        <item name="tint">@color/white</item>
+    </style>
     <style name="calendarHeaderStyle">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">20sp</item>
@@ -70,7 +73,7 @@
     <style name="editTextFildBackgroundColor">
         <item name="android:background">#00000000</item>
     </style>
-    <style name="backgroundColor">
+    <style name="cardBackgroundColor">
         <item name="cardBackgroundColor">@color/white</item>
     </style>
 

@@ -26,7 +26,10 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:text="todo list"
-                    android:padding="30dp"
+                    android:paddingStart="30dp"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:fontFamily="@font/elmessiri"
                     style="@style/toolBarTitle"
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>

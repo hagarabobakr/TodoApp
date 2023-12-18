@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             showAddTaskBottomSheet();
         }
     }
-    fun showAddTaskBottomSheet(){
+    fun showAddTaskBottomSheet() {
         val addTaskBottomSheet = AddTaskBottomSheet();
         addTaskBottomSheet.onDismissListener = OnDismissListener {
             tasksListFragment.loadTasks()

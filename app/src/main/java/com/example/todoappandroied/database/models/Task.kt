@@ -10,5 +10,5 @@ data class Task(
    @ColumnInfo var title: String? = null,
    @ColumnInfo var description: String? = null,
    @ColumnInfo var date : Long? = null,
-   @ColumnInfo var isDone: Boolean = false,
-)
+   @ColumnInfo var isDone: Boolean = false
+):java.io.Serializable

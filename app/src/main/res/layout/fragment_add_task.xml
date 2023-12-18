@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Task"
+        android:fontFamily="@font/elmessiri"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Task Title"
+            android:fontFamily="@font/elmessiri"
             style="@style/editTextFildBackgroundColor"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Task Description"
+            android:fontFamily="@font/elmessiri"
             android:minLines ="4"
             android:maxLines ="4"
             android:gravity="start"
@@ -61,9 +64,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Task Date"
+            android:fontFamily="@font/elmessiri"
             android:gravity="start"
             android:padding="12dp"
-
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,6 +77,7 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:text="Submit"
+        android:fontFamily="@font/elmessiri"
         app:tint="@color/blue"
         app:layout_constraintTop_toBottomOf="@id/task_date"
 

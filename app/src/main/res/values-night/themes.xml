@@ -57,7 +57,10 @@
     <style name="themColor">
         <item name="android:textColor">@color/white</item>
     </style>
-    <style name="backgroundColor">
+    <style name="cardBackgroundColor">
         <item name="cardBackgroundColor">#141922</item>
+    </style>
+    <style name="themArrwoBackgroundColor">
+        <item name="tint">@color/black</item>
     </style>
 </resources>

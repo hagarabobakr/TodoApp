@@ -1,12 +1,19 @@
 package com.example.todoappandroied.ui.home.list
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.todoappandroied.Constants
+import com.example.todoappandroied.R
 import com.example.todoappandroied.database.MyDatabase
+import com.example.todoappandroied.database.models.Task
 import com.example.todoappandroied.databinding.FragmentListBinding
+import com.example.todoappandroied.ui.home.MainActivity
+import com.example.todoappandroied.ui.home.edit.EditTaskActivity
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import java.util.Calendar
 
@@ -23,6 +30,11 @@ class ListFragment : Fragment() {
     lateinit var taskAdapter: TasksRecyclerAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initViews()
+    }
+
+    private fun initViews() {
+
         taskAdapter = TasksRecyclerAdapter(null)
         viewBinding.tasksRecycler.adapter = taskAdapter
         viewBinding.calendarView.setOnDateChangedListener { widget, date, selected ->
@@ -34,8 +46,61 @@ class ListFragment : Fragment() {
             }
         }
         viewBinding.calendarView.selectedDate = CalendarDay.today()
+        taskAdapter.onCarditemEditClick =
+            OnCardItemEditClick {task ->
+                val alirtDialogBuldir = AlertDialog.Builder(activity)
+                    .setMessage(resources.getString(R.string.edit))
+                    .setPositiveButton("Update")
+                    { _, which ->
+                        updateTodo(task)
+                    }.setNegativeButton("No",
+                        { dialog, which ->
+                            dialog.dismiss()
+                        }).show()
+            }
+        taskAdapter.onCardItemDeletClick = OnCardItemDeletClick { task ->
+            val alirtDialogBuldir = AlertDialog.Builder(activity)
+                .setMessage(resources.getString(R.string.delet))
+                .setPositiveButton("Delet")
+                { _, which ->
+                    deletTodo(task)
+                }.setNegativeButton("No",
+                    { dialog, which ->
+                        dialog.dismiss()
+                    }).show()
+        }
+        taskAdapter.onCardItemDonetClick = OnCardItemDoneClick { task ->
+        task.isDone = true
+            MyDatabase.getDatabase(requireContext())
+                .tasksDao()
+                .updateTask(task)
+            refreshRecyclerView()
+        }
+    }
+
+    private fun deletTodo(task: Task?) {
+        if (task != null) {
+            MyDatabase.getDatabase(requireContext())
+                .tasksDao()
+                .deleteTask(task)
+            refreshRecyclerView()
+        }
+    }
+
+    private fun refreshRecyclerView() {
+        taskAdapter.changeData(MyDatabase.getDatabase(requireContext()).
+        tasksDao().getTasksByDate(currentDate.timeInMillis))
+        taskAdapter.notifyDataSetChanged()
+    }
+
+    private fun updateTodo(task: Task) {
+        var intent = Intent(requireContext(),EditTaskActivity()::class.java)
+        intent.putExtra(Constants.TASK,task)
+        startActivity(intent)
 
     }
+
+
     var currentDate = Calendar.getInstance()
     init {
         currentDate.set(Calendar.HOUR,0)
@@ -47,7 +112,6 @@ class ListFragment : Fragment() {
         super.onResume()
         loadTasks()
     }
-
     fun loadTasks(){
         if(!isResumed){
             return
