@@ -40,7 +40,7 @@ class ListFragment : Fragment() {
         viewBinding.calendarView.setOnDateChangedListener { widget, date, selected ->
             if (selected){
                 currentDate.set(Calendar.DAY_OF_MONTH,date.day)
-                currentDate.set(Calendar.MONTH,date.month)
+                currentDate.set(Calendar.MONTH,date.month-1)
                 currentDate.set(Calendar.YEAR,date.year)
                 loadTasks()
             }
@@ -71,7 +71,8 @@ class ListFragment : Fragment() {
         }
         taskAdapter.onCardItemDonetClick = OnCardItemDoneClick { task ->
         task.isDone = true
-            MyDatabase.getDatabase(requireContext())
+            MyDatabase
+                .getDatabase(requireContext())
                 .tasksDao()
                 .updateTask(task)
             refreshRecyclerView()

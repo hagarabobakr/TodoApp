@@ -76,5 +76,11 @@
     <style name="cardBackgroundColor">
         <item name="cardBackgroundColor">@color/white</item>
     </style>
+    <style name="bottomNavBackgroundColor">
+        <item name="android:background">#00000000</item>
+    </style>
+    <style name="bottomAppBarBackgroundColor">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
 
 </resources>

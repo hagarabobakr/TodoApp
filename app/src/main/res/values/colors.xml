@@ -7,5 +7,6 @@
     <color name="navy">#060E1E</color>
     <color name="green">#5EDE55</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lightBlack">#141922</color>
     <color name="screenBackground">@color/mintGreen</color>
 </resources>

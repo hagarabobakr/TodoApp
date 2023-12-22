@@ -47,15 +47,14 @@
         app:fabCradleMargin="18dp"
         app:fabCradleRoundedCornerRadius="8dp"
         app:fabCradleVerticalOffset="18dp"
-        android:backgroundTint="@color/white"
-
+        style="@style/bottomAppBarBackgroundColor"
         >
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/nav_bar_menu"
-            android:background="#00000000"
+            style="@style/bottomNavBackgroundColor"
             app:elevation="0dp"
             />
 
