@@ -12,7 +12,6 @@ import com.example.todoappandroied.R
 import com.example.todoappandroied.database.MyDatabase
 import com.example.todoappandroied.database.models.Task
 import com.example.todoappandroied.databinding.FragmentListBinding
-import com.example.todoappandroied.ui.home.MainActivity
 import com.example.todoappandroied.ui.home.edit.EditTaskActivity
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import java.util.Calendar
@@ -47,29 +46,29 @@ class ListFragment : Fragment() {
         }
         viewBinding.calendarView.selectedDate = CalendarDay.today()
         taskAdapter.onCarditemEditClick =
-            OnCardItemEditClick {task ->
+            OnCardItemClick { task ->
                 val alirtDialogBuldir = AlertDialog.Builder(activity)
                     .setMessage(resources.getString(R.string.edit))
-                    .setPositiveButton("Update")
+                    .setPositiveButton(getString(R.string.update))
                     { _, which ->
                         updateTodo(task)
-                    }.setNegativeButton("No",
+                    }.setNegativeButton(getString(R.string.no),
                         { dialog, which ->
                             dialog.dismiss()
                         }).show()
             }
-        taskAdapter.onCardItemDeletClick = OnCardItemDeletClick { task ->
+        taskAdapter.onCardItemDeletClick = OnCardItemClick { task ->
             val alirtDialogBuldir = AlertDialog.Builder(activity)
                 .setMessage(resources.getString(R.string.delet))
-                .setPositiveButton("Delet")
+                .setPositiveButton(getString(R.string.delete))
                 { _, which ->
                     deletTodo(task)
-                }.setNegativeButton("No",
+                }.setNegativeButton(getString(R.string.no),
                     { dialog, which ->
                         dialog.dismiss()
                     }).show()
         }
-        taskAdapter.onCardItemDonetClick = OnCardItemDoneClick { task ->
+        taskAdapter.onCardItemDonetClick = OnCardItemClick { task ->
         task.isDone = true
             MyDatabase
                 .getDatabase(requireContext())

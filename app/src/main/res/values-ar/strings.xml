@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مهامي</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">أهلاً في صفحة فارغة</string>
+    <string name="ListScreenTitle">قائمة المهام</string>
+    <string name="SettingsScreenTitle">الاعدادات</string>
+    <string name="successfully">تم اضافة المهمة بنجاح</string>
+    <string name="ok">حسناً</string>
+    <string name="edit">هل أنت متأكد من رغبتك في تعديل المهمة</string>
+    <string name="delet">هل أنت متأكد من رغبتك في حذف المهمة</string>
+    <string name="todo_list">قائمة المهام</string>
+    <string name="edit_task">تعديل المهمة</string>
+    <string name="task_title_hint">العنوان</string>
+    <string name="task_description_hint">الوصف</string>
+    <string name="task_date">التاريخ</string>
+    <string name="submit">حفظ</string>
+    <string name="color_blue_content_discreption">لون أزرق</string>
+    <string name="add_task_content_description">اضافة المهمة</string>
+    <string name="splash_screen_content_description">شاشة البداية</string>
+    <string name="add_task">اضافة المهمة</string>
+    <string name="task_date_hint">التاريخ</string>
+    <string name="done_button_content_description">زر الانهاء</string>
+    <string name="icon_delete_content_description">رمز الحذف</string>
+    <string name="icon_edit_content_description">رمز التعديل</string>
+    <string name="list">الرئيسية</string>
+    <string name="setting">الاعدادات</string>
+    <string name="no">لا</string>
+    <string name="delete">حذف</string>
+    <string name="update">تعديل</string>
+    <string name="please_enter_title">من فضلك أدخل عنوان المهمة</string>
+    <string name="please_enter_description">من فضلك أدخل وصف المهمة</string>
+</resources>

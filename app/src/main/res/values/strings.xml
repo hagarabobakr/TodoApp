@@ -8,4 +8,25 @@
     <string name="ok">Ok</string>
     <string name="edit">Are you sure you want to modify the task</string>
     <string name="delet">Are you sure you want to delet the task</string>
+    <string name="todo_list">todo list</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="task_title_hint">Task Title</string>
+    <string name="task_description_hint">Task Description</string>
+    <string name="task_date">Task Date</string>
+    <string name="submit">Submit</string>
+    <string name="color_blue_content_discreption">color blue</string>
+    <string name="add_task_content_description">Add task</string>
+    <string name="splash_screen_content_description">splash screen</string>
+    <string name="add_task">Add Task</string>
+    <string name="task_date_hint">Task Date</string>
+    <string name="done_button_content_description">done button</string>
+    <string name="icon_delete_content_description">icon delete</string>
+    <string name="icon_edit_content_description">icon edit</string>
+    <string name="list">List</string>
+    <string name="setting">setting</string>
+    <string name="no">No</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="please_enter_title">please enter title</string>
+    <string name="please_enter_description">please enter description</string>
 </resources>

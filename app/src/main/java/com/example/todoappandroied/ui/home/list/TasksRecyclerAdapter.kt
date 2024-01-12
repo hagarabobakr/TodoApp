@@ -15,21 +15,21 @@ class TasksRecyclerAdapter(var items : List<Task>?): RecyclerView.Adapter<TasksR
         ,parent,false)
         return ViewHolder(viewBinding)
     }
-    var onCarditemEditClick : OnCardItemEditClick? = null
-    var onCardItemDeletClick : OnCardItemDeletClick? = null
-    var onCardItemDonetClick : OnCardItemDoneClick? = null
+    var onCarditemEditClick : OnCardItemClick? = null
+    var onCardItemDeletClick : OnCardItemClick? = null
+    var onCardItemDonetClick : OnCardItemClick? = null
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.viewBinding.title.text = items?.get(position)?.title
         holder.viewBinding.desc.text = items?.get(position)?.description
         holder.viewBinding.leftView.setOnClickListener {
-            onCarditemEditClick?.onCardItemEditClicked(items!![position])
+            onCarditemEditClick?.onCardItemClicked(items!![position])
         }
         holder.viewBinding.rightView.setOnClickListener {
-            onCardItemDeletClick?.onCardItemDeletClicked(items!![position])
+            onCardItemDeletClick?.onCardItemClicked(items!![position])
         }
         holder.viewBinding.doneBtn.setOnClickListener {
-            onCardItemDonetClick?.onCardItemDoneClicked(items!![position])
+            onCardItemDonetClick?.onCardItemClicked(items!![position])
         }
         if(items!![position].isDone){
             holder.viewBinding.title.setTextColor(Color.GREEN)

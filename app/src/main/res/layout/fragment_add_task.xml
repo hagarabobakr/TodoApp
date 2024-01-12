@@ -9,7 +9,7 @@
         style="@style/titleTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Task"
+        android:text="@string/add_task"
         android:fontFamily="@font/elmessiri"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +26,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Task Title"
+            android:hint="@string/task_title_hint"
             android:fontFamily="@font/elmessiri"
+            android:inputType="text"
             style="@style/editTextFildBackgroundColor"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -42,11 +43,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Task Description"
+            android:hint="@string/task_description_hint"
             android:fontFamily="@font/elmessiri"
             android:minLines ="4"
             android:maxLines ="4"
             android:gravity="start"
+            android:inputType="textMultiLine"
             style="@style/editTextFildBackgroundColor"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,7 +65,7 @@
             android:id = "@+id/task_date_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Task Date"
+            android:hint="@string/task_date_hint"
             android:fontFamily="@font/elmessiri"
             android:gravity="start"
             android:padding="12dp"
@@ -76,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="12dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:fontFamily="@font/elmessiri"
         app:tint="@color/blue"
         app:layout_constraintTop_toBottomOf="@id/task_date"

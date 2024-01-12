@@ -72,7 +72,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_check" />
+                app:srcCompat="@drawable/ic_check"
+                android:contentDescription="@string/done_button_content_description"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -84,7 +86,9 @@
         android:background="@drawable/delet_img_shape"
         android:gravity="center"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_delete"/>
+        android:src="@drawable/ic_delete"
+        android:contentDescription="@string/icon_delete_content_description"
+        />
     <ImageView
         android:id="@+id/left_view"
         android:layout_width="100dp"
@@ -93,6 +97,8 @@
         android:background="@drawable/edit_img_shape"
         android:gravity="center"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_edit_calendar"/>
+        android:src="@drawable/ic_edit_calendar"
+        android:contentDescription="@string/icon_edit_content_description"
+        />
 
 </com.zerobranch.layout.SwipeLayout>

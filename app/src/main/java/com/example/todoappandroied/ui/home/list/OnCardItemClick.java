@@ -2,6 +2,6 @@ package com.example.todoappandroied.ui.home.list;
 
 import com.example.todoappandroied.database.models.Task;
 
-public interface OnCardItemDoneClick {
-    void onCardItemDoneClicked(Task task);
+public interface OnCardItemClick {
+    void onCardItemClicked(Task task);
 }

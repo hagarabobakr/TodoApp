@@ -54,13 +54,13 @@ class AddTaskBottomSheet : BottomSheetDialogFragment() {
         val title = viewBinding.taskTitle.editText?.text.toString()
         val des = viewBinding.taskDesc.editText?.text.toString()
         if(title.isNullOrBlank()){
-            viewBinding.taskTitle.error = "please enter title"
+            viewBinding.taskTitle.error = getString(R.string.please_enter_title)
             valid = false
         }else{
             viewBinding.taskTitle.error = null
         }
         if(des.isNullOrBlank()){
-            viewBinding.taskDesc.error = "please enter title"
+            viewBinding.taskDesc.error = getString(R.string.please_enter_description)
             valid = false
         }else{
             viewBinding.taskDesc.error = null
